@@ -62,7 +62,7 @@ const adivinarNombre = (categoria) => {
     }
     // Si se acabaron las pistas y el usuario no le pegó, mostrar respuesta y salir
     if (pistaInicio === persona.pistas.length) {
-        alert(`Te quedaste sin pistas. La respuesta correcta era: ${persona.nombre}`);
+        alert(`Te quedaste sin pistas.\nLa respuesta correcta era: ${persona.nombre}`);
         seguirAdivinando = false;
     }
     }
@@ -70,7 +70,7 @@ const adivinarNombre = (categoria) => {
 
 // Llamada a la función principal
 const iniciarJuego = () => {
-    const categoriaElegida = prompt("Elige una categoría para adivinar ('actores', 'peliculas' o 'cantantes'):");
+    const categoriaElegida = prompt("Bienvenido/a, vamos a Jugar!\nElegí una categoría para adivinar ('actores', 'peliculas' o 'cantantes'):");
 
     if (["actores", "peliculas", "cantantes"].includes(categoriaElegida)) {
     adivinarNombre(categoriaElegida);
